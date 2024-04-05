@@ -12,7 +12,14 @@ app.set("views", "pages");
 
 // set Routing
 app.get("/", (req, res) => {
-  res.render("index", { title: "Home" });
+
+const blogsData=[
+  {title : 'blog 1' , desc : '1 lorem impsun ....'},
+  {title : 'blog 2' , desc : '2 lorem impsun ....'},
+  {title : 'blog 3' , desc : '3 lorem impsun ....'}
+]
+
+  res.render("index", { title: "Home"  , blogsData});
 });
 
 app.get("/about", (req, res) => {
@@ -30,3 +37,7 @@ app.get("/blogs/create-blog", (req, res) => {
 app.use((req, res) => {
   res.render("404", { title: "404" });
 });
+
+
+
+
