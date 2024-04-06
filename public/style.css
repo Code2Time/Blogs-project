@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.Rubik {
+  font-family: "Rubik Scribble", system-ui;
+}
+
+
+body {
+  background-color: #222;
+  color: #fff;
+  font-family: 'Roboto Slab' , sans-serif;
+}
+
+.web-title {
+  filter: drop-shadow(0 0 40px white);
+}
+
+.nav-container {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.075);
+}
+
+.ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style-type: none;
+  font-family: sans-serif;
+}
+
+.ul li {
+  margin: 0 10px;
+  transition: all 0.3s;
+}
+
+.ul li:hover {
+  transform: translateY(-1px);
+  font-size: 20px;
+}
+
+.ul li a {
+  color: #fff;
+  text-decoration: none;
+} /*# sourceMappingURL=style.css.map */
