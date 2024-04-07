@@ -1,22 +1,31 @@
 //   use Express
 const express = require("express");
 const morgan = require("morgan");
+const mongoose = require("mongoose");
 const app = express();
 
-//  listen default on port (3000)
-app.listen(3000);
+
 app.use(morgan("short"));
 
-// Reset viwe Engine
 
+
+// MongoDB connection
+
+const dbURI =
+  "mongodb+srv://amir:test123@blogs.p3nlzin.mongodb.net/blogs?retryWrites=true&w=majority&appName=blogs";
+mongoose
+  .connect(dbURI)
+  .then((result) => app.listen(3000))
+  .catch((err) => console.log(err));
+
+
+  // Reset viwe Engine
 app.set("view engine", "ejs");
 app.set("views", "pages");
 
 // middle ware and static Files
 
-app.use(express.static('public'))
-
-
+app.use(express.static("public"));
 
 // set Routing
 app.get("/", (req, res) => {
