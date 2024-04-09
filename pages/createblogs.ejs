@@ -1,20 +1,20 @@
 <html lang="en">
   <%- include('../partials/head.ejs') %>
   <body>
-    <%- include('../partials/nav.ejs') %>
-    <%- include('../partials/footer.ejs') %>
-
-    <div class="inputs-container">
-      <label for="title Blog">title Blog</label>
-      <input type="text" name="title Blog" >
+    <%- include('../partials/nav.ejs') %> <%- include('../partials/footer.ejs')
+    %>
+    <div class="container-inputs">
+      <div class="inputs-container">
+        <label for="title Blog">title Blog</label>
+        <input type="text" name="title Blog" />
+      </div>
+      <div class="inputs-container">
+        <label for="desc Blog">desc Blog</label>
+        <textarea name="desc Blog" cols="21.5" rows="5"></textarea>
+      </div>
+      <div class="button">
+        <button class="button-32" role="button">Create Blog</button>
+      </div>
     </div>
-    <div class="inputs-container">
-      <label for="desc Blog">desc Blog</label>
-      <input type="text" name="desc Blog" >
-    </div>
-    <!-- <div class="inputs-container">
-      <label for="title Blog">title Blog</label>
-      <input type="text" name="title Blog" >
-    </div> -->
   </body>
 </html>
